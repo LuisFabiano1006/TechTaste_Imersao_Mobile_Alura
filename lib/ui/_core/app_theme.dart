@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/ui/_core/app_collors.dart';
+import 'package:myapp/ui/_core/app_colors.dart';
 
 abstract class AppTheme {
   static ThemeData appTheme = ThemeData.dark().copyWith(
@@ -12,7 +12,7 @@ abstract class AppTheme {
           } else if (states.contains(WidgetState.pressed)) {
             return const Color.fromARGB(171, 255, 164, 89);
           }
-          return AppCollors.mainColor;
+          return AppColors.mainColor;
         }),
       ),
     ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/ui/_core/app_collors.dart';
+import 'package:myapp/ui/_core/app_colors.dart';
+import 'package:myapp/ui/home/home_screen.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -7,7 +8,7 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppCollors.backgroundColor,
+      backgroundColor: AppColors.backgroundColor,
       body: Stack(
         children: [
           Image.asset('assets/banners/banner_splash.png'),
@@ -28,7 +29,7 @@ class SplashScreen extends StatelessWidget {
                       Text(
                         "Melhor experiência culinária!",
                         style: TextStyle(
-                          color: AppCollors.mainColor,
+                          color: AppColors.mainColor,
                           fontSize: 22,
                           fontWeight: FontWeight.w400,
                         ),
@@ -38,7 +39,16 @@ class SplashScreen extends StatelessWidget {
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return HomeScreen();
+                            },
+                          ),
+                        );
+                      },
                       child: Text("Bora!"),
                     ),
                   ),
